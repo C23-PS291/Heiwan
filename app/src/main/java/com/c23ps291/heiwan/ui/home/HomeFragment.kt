@@ -1,6 +1,7 @@
 package com.c23ps291.heiwan.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,8 +57,8 @@ class HomeFragment : Fragment() {
         binding.emptyState.root.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
+    override fun onDestroy() {
+        super.onDestroy()
         _binding = null
     }
 
